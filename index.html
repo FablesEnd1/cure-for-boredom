@@ -658,6 +658,137 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<script>
+  // Helper: simulate clicking the original button
+  function clickGameButtonByLabel(label) {
+    const buttons = document.querySelectorAll("#buttonContainer button .label");
+    for (let span of buttons) {
+      if (span.textContent === label) {
+        span.parentElement.click(); // trigger the button click
+        break;
+      }
+    }
+  }
 
+  // Dropdown handlers
+  document.getElementById("recentDropdown").addEventListener("change", e => {
+    const label = e.target.options[e.target.selectedIndex].text;
+    if (label && label !== "") {
+      clickGameButtonByLabel(label);
+    }
+  });
+
+  document.getElementById("favoritesDropdown").addEventListener("change", e => {
+    const label = e.target.options[e.target.selectedIndex].text;
+    if (label && label !== "") {
+      clickGameButtonByLabel(label);
+    }
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const favoritesDropdown = document.getElementById("favoritesDropdown");
+  const recentDropdown = document.getElementById("recentDropdown");
+  const buttons = document.querySelectorAll("#buttonContainer button");
+
+  // Static headers
+  function setHeader(dropdown, text) {
+    dropdown.innerHTML = "";
+    const header = document.createElement("option");
+    header.value = "";
+    header.textContent = text;
+    header.disabled = true;    // acts as a non-selectable title
+    header.selected = true;    // always shown as the label
+    dropdown.appendChild(header);
+  }
+
+  setHeader(favoritesDropdown, "Favorites");
+  setHeader(recentDropdown, "Recently played");
+
+  // Load saved data with shape: [{label, url}]
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  let recents = JSON.parse(localStorage.getItem("recents")) || [];
+
+  // Build dropdowns: header + items
+  function rebuildDropdown(dropdown, headerText, items) {
+    setHeader(dropdown, headerText);
+    items.forEach(item => {
+      // Skip broken items
+      if (!item || !item.url || !item.label) return;
+      const opt = document.createElement("option");
+      opt.value = item.url;
+      opt.textContent = item.label;
+      dropdown.appendChild(opt);
+    });
+  }
+
+  rebuildDropdown(favoritesDropdown, "Favorites", favorites);
+  rebuildDropdown(recentDropdown, "Recently played", recents);
+
+  // Helper: click original button by URL (more robust than label)
+  function clickOriginalByUrl(url) {
+    const btn = document.querySelector(`#buttonContainer button[data-url="${CSS.escape(url)}"]`);
+    if (btn) btn.click();
+  }
+
+  // Handle stars and recents via original button clicks
+  buttons.forEach(btn => {
+    const star = btn.querySelector(".fav-star");
+    const labelEl = btn.querySelector(".label");
+    const label = labelEl ? labelEl.textContent.trim() : "";
+    const url = btn.dataset.url;
+
+    if (!label || !url) return;
+
+    // Initialize star state
+    if (favorites.find(f => f.url === url)) {
+      star.textContent = "★";
+    }
+
+    // Toggle favorite
+    star.addEventListener("click", e => {
+      e.stopPropagation();
+      const exists = favorites.find(f => f.url === url);
+      if (exists) {
+        favorites = favorites.filter(f => f.url !== url);
+        star.textContent = "☆";
+      } else {
+        favorites.push({ label, url });
+        star.textContent = "★";
+      }
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      rebuildDropdown(favoritesDropdown, "Favorites", favorites);
+    });
+
+    // Push to recents when original button clicked
+    btn.addEventListener("click", () => {
+      recents = recents.filter(r => r.url !== url);
+      recents.unshift({ label, url });
+      if (recents.length > 10) recents.pop();
+      localStorage.setItem("recents", JSON.stringify(recents));
+      rebuildDropdown(recentDropdown, "Recently played", recents);
+    });
+  });
+
+  // Dropdown selection: click the original button (by URL), then reset to header
+  function attachMenu(dropdown, headerText) {
+    dropdown.addEventListener("change", () => {
+      const idx = dropdown.selectedIndex;
+      const url = dropdown.value;
+
+      // idx 0 is header; idx 1 is the FIRST GAME — this now works
+      if (idx > 0 && url) {
+        clickOriginalByUrl(url);
+      }
+
+      // Always reset to header so the dropdown label stays static
+      dropdown.selectedIndex = 0;
+    });
+  }
+
+  attachMenu(favoritesDropdown, "Favorites");
+  attachMenu(recentDropdown, "Recently played");
+});
+</script>
 </body>
 </html>
