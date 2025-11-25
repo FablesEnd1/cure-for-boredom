@@ -584,6 +584,80 @@
     }
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const favoritesDropdown = document.getElementById("favoritesDropdown");
+  const recentDropdown = document.getElementById("recentDropdown");
+  const buttons = document.querySelectorAll("#buttonContainer button");
+
+  // Load saved data
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  let recents = JSON.parse(localStorage.getItem("recents")) || [];
+
+  function updateDropdown(dropdown, items, placeholder) {
+    dropdown.innerHTML = "";
+    if (items.length === 0) {
+      const opt = document.createElement("option");
+      opt.textContent = placeholder;
+      dropdown.appendChild(opt);
+    } else {
+      items.forEach(item => {
+        const opt = document.createElement("option");
+        opt.value = item.url;
+        opt.textContent = item.label;
+        dropdown.appendChild(opt);
+      });
+    }
+  }
+
+  updateDropdown(favoritesDropdown, favorites, "Favorites (none yet)");
+  updateDropdown(recentDropdown, recents, "Recently played (none yet)");
+
+  // Handle favorites
+  buttons.forEach(btn => {
+    const star = btn.querySelector(".fav-star");
+    const label = btn.querySelector(".label").textContent;
+    const url = btn.dataset.url;
+
+    star.addEventListener("click", e => {
+      e.stopPropagation();
+      const exists = favorites.find(f => f.url === url);
+      if (exists) {
+        favorites = favorites.filter(f => f.url !== url);
+        star.textContent = "☆";
+      } else {
+        favorites.push({label, url});
+        star.textContent = "★";
+      }
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      updateDropdown(favoritesDropdown, favorites, "Favorites (none yet)");
+    });
+
+    // Mark star if already favorite
+    if (favorites.find(f => f.url === url)) {
+      star.textContent = "★";
+    }
+
+    // Handle recently played
+    btn.addEventListener("click", () => {
+      recents = recents.filter(r => r.url !== url);
+      recents.unshift({label, url});
+      if (recents.length > 10) recents.pop(); // keep last 10
+      localStorage.setItem("recents", JSON.stringify(recents));
+      updateDropdown(recentDropdown, recents, "Recently played (none yet)");
+    });
+  });
+
+  // Allow dropdown navigation
+  [favoritesDropdown, recentDropdown].forEach(dropdown => {
+    dropdown.addEventListener("change", () => {
+      if (dropdown.value) {
+        window.open(dropdown.value, "_blank");
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
