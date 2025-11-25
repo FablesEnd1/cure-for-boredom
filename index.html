@@ -560,6 +560,30 @@
     }
   }
 </script>
+<script>
+  const panicInput = document.getElementById("panicLink");
+
+  // Load saved panic link on startup
+  const savedLink = localStorage.getItem("panicLink");
+  if (savedLink) {
+    panicInput.value = savedLink;
+  }
+
+  // Save panic link whenever the input changes
+  panicInput.addEventListener("input", () => {
+    localStorage.setItem("panicLink", panicInput.value.trim());
+  });
+
+  // Shortcut keys: "\" or Alt+P
+  document.addEventListener("keydown", (e) => {
+    const link = localStorage.getItem("panicLink");
+    if (!link) return;
+
+    if (e.key === "\\" || (e.altKey && e.key.toLowerCase() === "p")) {
+      window.location.href = link;
+    }
+  });
+</script>
 
 </body>
 </html>
