@@ -99,7 +99,7 @@
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycby6NyBKr5sGwJ5lGXSwGEq6DlpfC794H6eMj8ymQmt7T5l8_4Tk9yIXJhwNjzoifKIx/exec">   <span class="label">Abandoned</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycby2JlS7zrXUMn8a63H8TXhROmx6rrUrwjDAIGXeNrfRaoihzYLALwKC7MDq7fuzxWIoCw/exec">   <span class="label">Age Of War</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycby-iGW7nI13rNOfHdtQvt2g3ik1HWzcZyr0US6sz_OeR2eN0flkKMyKjvvXVPs49WKE/exec">   <span class="label">Age Of War 2</span><span class="fav-star">☆</span> </button>
-    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycby30nrhMSPeJyfgpPQfLsVVhOxjjyErkIsQtoYAzPkRYenYcSBpVyMcOwXy_flMCjFm/exec">   <span class="label">Angry Birds</span><span class="fav-star">☆</span> </button>
+    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycb30nrhMSPeJyfgpPQfLsVVhOxjjyErkIsQtoYAzPkRYenYcSBpVyMcOwXy_flMCjFm/exec">   <span class="label">Angry Birds</span><span class="fav-star">☆</span> </button>
     <button data-url="https://appel.pages.dev/">   <span class="label">Appel</span><span class="fav-star">☆</span> </button>
     <button data-url="https://archero.pages.dev/play/archero">   <span class="label">Archero</span><span class="fav-star">☆</span> </button>
     <button data-url="https://storeg223.github.io/g5/class-554/">   <span class="label">Archery World Tour</span><span class="fav-star">☆</span> </button>
@@ -109,7 +109,7 @@
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbMc9YDautmU6ZzhHR7yvfWrxnr0pQ1FedN8zNOhluXnNGb0z9xq_igcdD5kLhwVJO4/exec">   <span class="label">Armed With Wings</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbzOCei0UaoJR3ZC-Ucj79IuKdp3mAz-ncOk9dMGnenhnpjTzB6lh2rjOrwM5JX5cPuYGQ/exec">   <span class="label">Armed With Wings 2</span><span class="fav-star">☆</span> </button>
     <button data-url="https://www.coolmathgames.com/sites/default/files/public_games/41808/?gd_sdk_referrer_url=https://www.coolmathgames.com/0-atari-breakout">   <span class="label">Atari Breakout</span><span class="fav-star">☆</span> </button>
-    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbymevkeavNOsB5HAuBlRXCr11dpWboVy58LIy4v_Np9hzx4NgD3Os9Uow5yrKylc2uu/exec">   <span class="label">Awesome Tanks</span><span class="fav-star">☆</span> </button>
+    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbmevkeavNOsB5HAuBlRXCr11dpWboVy58LIy4v_Np9hzx4NgD3Os9Uow5yrKylc2uu/exec">   <span class="label">Awesome Tanks</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbyJgJSpZLYW4t7SEW5VCiR5pQyGtXlTSYP4ohz57LkTI3RFdVJNQEnLihXgleCe9wtudQ/exec">   <span class="label">Awesome Tank 2</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbxoz2PvUkWpxsV1-0iMn7pwzQ060snqkpynoRNjZ1e6i26bjYW1-qyS-gOoiIVVxeo/exec">   <span class="label">Bad Piggies</span><span class="fav-star">☆</span> </button>
     <button data-url="https://www.coolmathgames.com/sites/default/files/public_games/49889/">   <span class="label">Boba Simulator</span><span class="fav-star">☆</span> </button>
@@ -151,7 +151,7 @@
     <button data-url="https://storeg223.github.io/g7/class-90/">   <span class="label">Daddy Long Legs</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbzwUaDK8U6_bsC7-FFYI_iLh1tHHWcrCcmAfYgw1_6rrvoJdNQFzEr_VtTbQJEr3ZIYFA/exec">   <span class="label">Doodle God</span><span class="fav-star">☆</span> </button>
     <button data-url="https://doodlejump.pages.dev/">   <span class="label">Doodle Jump</span><span class="fav-star">☆</span> </button>
-    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbyxLM58t1oGIyqp09GNTAGBqUBaFg7A9nY5lLwS45Zg2z63ax0EmnhHCXW_aHhEpdFcqg/exec">   <span class="label">Doom</span><span class="fav-star">☆</span> </button>
+    <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbyxLM58t1oGIyqp09GNTAGBqUBaFg7A9nY5LlLwS45Zg2z63ax0EmnhHCXW_aHhEpdFcqg/exec">   <span class="label">Doom</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbx61mSm2aEx_wwEQB66hIGUZm8hV2dBZvo2QXcabpXvc0r25c22pW-pdE8tmxBjOWcWCw/exec">   <span class="label">Doom 2</span><span class="fav-star">☆</span> </button>
     <button data-url="https://script.google.com/a/macros/sd215.net/s/AKfycbzzQ-KS89sAq_85ymMiWnz7_Piw_GDPiB20u_ZyXOgWUgO432XOvvXN-2DZB6MgWaxU/exec">   <span class="label">Doom 2D</span><span class="fav-star">☆</span> </button>
     <button data-url="https://driftboss.pages.dev/">   <span class="label">Drift Boss</span><span class="fav-star">☆</span> </button>
@@ -370,7 +370,8 @@
 
 <div id="gameArea">
   <button id="backBtn">Back to Launcher</button>
-  <iframe id="gameFrame"></iframe>
+  <!-- fullscreen enabled on iframe -->
+  <iframe id="gameFrame" allow="fullscreen" allowfullscreen></iframe>
 </div>
 
 <div id="loginOverlay">
@@ -498,6 +499,14 @@
           document.getElementById("gameCounter").style.display = "none";
           document.getElementById("buttonContainer").style.display = "none";
           document.getElementById("settingsPanel").style.display = "none";
+
+          // Enter fullscreen for the game area
+          const gameAreaEl = document.getElementById("gameArea");
+          if (gameAreaEl.requestFullscreen) {
+            gameAreaEl.requestFullscreen().catch(() => {});
+          } else if (gameAreaEl.webkitRequestFullscreen) { // iOS/Safari
+            gameAreaEl.webkitRequestFullscreen();
+          }
         }
 
         recents = [gameName, ...recents.filter(r => r !== gameName)].slice(0,10);
@@ -540,6 +549,13 @@
         document.getElementById("favoritesDropdown").style.display = "block";
         document.getElementById("gameCounter").style.display = "block";
         document.getElementById("buttonContainer").style.display = "flex";
+
+        // Exit fullscreen if active
+        if (document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        } else if (document.webkitFullscreenElement && document.webkitExitFullscreen) { // iOS/Safari
+          document.webkitExitFullscreen();
+        }
       });
     }
   }
